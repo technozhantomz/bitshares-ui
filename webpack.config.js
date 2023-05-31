@@ -73,7 +73,7 @@ module.exports = function(env) {
         new HtmlWebpackPlugin({
             template: "!!handlebars-loader!app/assets/index.hbs",
             templateParameters: {
-                title: "BitShares " + __VERSION__,
+                title: "AcloudBank " + __VERSION__,
                 INCLUDE_BASE: !!env.prod && !env.hash,
                 PRODUCTION: !!env.prod,
                 ELECTRON: !!env.electron
@@ -88,7 +88,7 @@ module.exports = function(env) {
             __UI_API__: JSON.stringify(env.apiUrl),
             __TESTNET__: !!env.testnet,
             __DEPRECATED__: !!env.deprecated,
-            DEFAULT_SYMBOL: "BTS",
+            DEFAULT_SYMBOL: "KSH",
             __GIT_BRANCH__: JSON.stringify(git.branch()),
             __PERFORMANCE_DEVTOOL__: !!env.perf_dev
         }),
@@ -418,8 +418,13 @@ module.exports = function(env) {
                 {
                     test: /.*\.svg$/,
                     exclude: [
-                        path.resolve(root_dir, "app/assets/model-type-images"),
-                        path.resolve(root_dir, "app/assets/bin-file")
+                        path.resolve(root_dir, "app/assets/asset-symbols"),
+                        path.resolve(root_dir, "app/assets/coins-logo"),
+                        path.resolve(root_dir, "app/assets/images"),
+                        path.resolve(
+                            root_dir,
+                            "app/assets/language-dropdown/img"
+                        )
                     ],
                     use: [
                         {

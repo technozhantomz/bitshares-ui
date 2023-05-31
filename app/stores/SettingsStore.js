@@ -13,7 +13,7 @@ import {
     getUnits
 } from "branding";
 
-const CORE_ASSET = "BTS"; // Setting this to BTS to prevent loading issues when used with BTS chain which is the most usual case currently
+const CORE_ASSET = "KSH"; // Setting this to BTS to prevent loading issues when used with BTS chain which is the most usual case currently
 
 const STORAGE_KEY = "__graphene__";
 let ss = ls(STORAGE_KEY);
@@ -467,10 +467,10 @@ class SettingsStore {
             };
 
             let coreAssets = {
-                markets_4018d784: "BTS",
+                markets_4018d784: "KSH",
                 markets_39f5e2ed: "TEST"
             };
-            let coreAsset = coreAssets[this.starredKey] || "BTS";
+            let coreAsset = coreAssets[this.starredKey] || "KSH";
             /*
              * Update units depending on the chain, also make sure the 0 index
              * asset is always the correct CORE asset name

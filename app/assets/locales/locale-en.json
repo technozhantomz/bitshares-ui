@@ -24,7 +24,7 @@
         "create_new": "Create A New Account",
         "credit_offer": "Credit Management",
         "deactivate_suspicious_proposals": "Hide approve for suspicious proposals",
-        "deposit": "Deposit BTS",
+        "deposit": "Deposit KSH",
         "deposit_address": "Your deposit address is your account name",
         "deposit_withdraw": "Deposit/Withdraw",
         "download_history": "Download History",
@@ -66,11 +66,11 @@
         "inVestingBalances": "In Vesting Balances",
         "in_open": "This is the amount of %(asset)s you have in open orders.",
         "in_open_value": "This is the estimated value of the %(asset)s you have in open orders.",
-        "intro_text_1": "Your Decentralized Platform",
-        "intro_text_2": "<b>The DEX</b> is inherently decentralized, enabling you to trade the BitShares core token (BTS) and a range of trustless price-stable, market-pegged assets such as bitUSD, bitCNY, bitBTC, bitGold and more. These assets can all be traded with <b>zero</b> counter-party risk, putting you in total control of your funds.",
+        "intro_text_1": "",
+        "intro_text_2": "<b>The DEX</b> is inherently decentralized, enabling you to trade the HomePesa core token (BTS) and a range of trustless price-stable, market-pegged assets such as bitUSD, bitCNY, bitBTC, bitGold and more. These assets can all be traded with <b>zero</b> counter-party risk, putting you in total control of your funds.",
         "intro_text_3": "<b>The DEX</b> also enables creation of user-issued assets (UIAs), which can be traded against any other UIAs or trustless assets on the platform.  One well-known asset owner on The DEX is <b>OpenLedger</b>, offering a host of assets including BTC, ETH, STEEM, DASH, LTC, DOGE, and many more",
         "intro_text_4": "This gives cryptocurrency traders a unique blend of traditional and decentralized trading, all in a familiar exchange interface. Happy trading!",
-        "intro_text_title": "Welcome to %(wallet_name)s",
+        "intro_text_title": "",
         "liquidity_pools": {
             "alert_asset_a": "ID of ASSET A should be greater than ID of ASSET B",
             "alert_asset_b": "ID of ASSET B should be smaller than ID of ASSET A",
@@ -165,9 +165,9 @@
         "no_price": "--",
         "no_trades": "No last trades",
         "open_orders": "Open Orders",
-        "optional": {
-            "formatter": "Optionally, {restore_link} or create an account using the {restore_form}.",
-            "restore_form": "advanced form",
+       "optional": {
+            "formatter": "{restore_form}",
+            "restore_form": "or CREATE CLOUD WALLET [CLICK]",
             "restore_link": "restore your account"
         },
         "options": {
@@ -185,7 +185,7 @@
         "percent": "% total supply",
         "perm": {
             "account_name_or_key": "Account name or key",
-            "acct_or_key": "Account / Key / Address",
+            "acct_or_key": "signatory_owner_authority",
             "action": "Action",
             "active": "Active Permissions",
             "add": "Add Permission",
@@ -204,7 +204,7 @@
             "new_active": "New active key",
             "new_memo": "New memo key",
             "new_owner": "New owner key",
-            "owner": "Owner Permissions",
+            "owner": "Signatory Permissions",
             "password_model": "Cloud Wallet",
             "password_model_1": "If you want to be able to login from anywhere using only your password and account name, you can use this page to add new keys to your permissions. If you also want to remove the original keys, you can do so in the active/owner permissions tabs.",
             "password_model_2": "Add password generated keys",
@@ -238,9 +238,9 @@
         "proposed_transactions": {
             "advanced_feature": "This is an advanced feature. Please answer the following questions",
             "answered_no": "If your answer to any of the questions above is no, do NOT continue. You can also turn this on and off in Settings.",
-            "question1": "Do you know what a proposal is?",
-            "question2": "Are you expecting a proposal?",
-            "question3": "Are you aware that a proposal can steal your funds or lock you out of the account?",
+            "question1": "Do you know what a business proposal is?",
+            "question2": "Are you expecting a business proposal?",
+            "question3": "Are you aware that a business proposal can steal your funds or lock you out of the account?",
             "show_me_proposals": "Show me Proposals"
         },
         "qty": "Qty",
@@ -511,7 +511,7 @@
         "ws_status": "Full node connection status"
     },
     "assets": {
-        "BTS": "BTS is the core token of the BitShares Blockchain"
+        "BTS": "KSH is the core token of the KSH Blockchain"
     },
     "boolean": {
         "false": "False",
@@ -583,20 +583,18 @@
         "borrow": "Loan",
         "borrow_amount": "Amount",
         "closed": "Closed",
-        "create": "Create credit offer",
+        "create": "New Credit facility",
         "credit_debt_account": "Account",
         "credit_debts": "Credit Debts",
-        "credit_offers": "Credit Offers",
+        "credit_offers": "Credit facility",
         "credit_right_account": "Account",
         "credit_rights": "Credit Rights",
-        "current_available_balance": "Current Available Balance",
         "current_balance": "Available",
         "debt": "Debt",
         "edit": "Modify credit offer",
         "estimated_fee": "Estimated fee",
         "fee_rate": "Rate",
         "info_borrow_err": "Can't borrow from oneself ！",
-        "invalid_min_bigger_amount": "Min cannot be bigger than amount",
         "list_repay_period": {
             "period_-1": "No limit",
             "period_0": "12 Hours",
@@ -611,22 +609,17 @@
         },
         "loan_amount": "Maximum",
         "min_borrow": "Minimum",
-        "min_loan_bigger_than_balance": "Min to loan > Total credit offer balance (%(min)s > %(balance)s)",
-        "mortgage_assets": "Collateral",
+        "mortgage_assets": "Loan Asset [amount]",
         "my_debt": "My debt",
-        "number_is_to_big": "You have used a big number which caused overflow",
         "operate": "Action",
         "operate_delete": "Delete",
         "operate_edit": "Modify",
-        "override_authority_warning": "Be careful, this asset has an `override_authority` setting, so the owner of the asset could transfer it back to himself with no agreement",
-        "override_authority_warning_p1": "%(symbol)s is controlled by its issuer",
-        "override_authority_warning_p2": "Do your own due diligence when using ",
         "pawn_amount": "Amount",
         "plh_input_asset_name": "Enter asset",
         "plh_select_validity_period": "Choose an expiration date",
         "price": "Price",
         "redemption_collateral": "Redeem collateral",
-        "repay": "Repay",
+        "repay": "Repay Loan",
         "repay_period": "Repay period",
         "status": "Status",
         "tip_fee_rate": "Expressed as a percentage",
@@ -634,7 +627,6 @@
         "title_add_pawn": "Add collateral",
         "title_add_whitelist": "Add white account",
         "total_amount": "Total",
-        "total_to_repay": "Repay Total",
         "validity_period": "Expiration",
         "whitelist_account": "Account"
     },
@@ -659,7 +651,7 @@
         "balance": "Balance",
         "base_supply": "Base supply",
         "bids": "Buy orders",
-        "borrow": "Borrow",
+        "borrow": "Borrow (No Interest)",
         "borrow_short": "Borrow",
         "buy": "Buy",
         "buy_description": "Buy %(baseAsset)s %(baseName)s for %(quoteAsset)s %(quoteName)s",
@@ -690,7 +682,7 @@
         "enter_chart_layout_name": "Enter Chart Layout Name",
         "featured": "Top Markets",
         "fee": "Fee",
-        "feed_price": "Feed Price",
+        "feed_price": "Exchange rate",
         "filter": "Filter...",
         "flip": "Flip",
         "global_settle": "Global Settlement",
@@ -777,7 +769,7 @@
         "quick_trade_details": {
             "amount": "Amount",
             "effective": "effective",
-            "feed_price": "Feed price",
+            "feed_price": "Exchange rate",
             "id": "Id",
             "last_price": "Last market price",
             "liquidity_penalty": "Liquidity penalty",
@@ -949,7 +941,6 @@
             "fee_pool": {
                 "accumulated_collateral_fees": "Accumulated collateral fees",
                 "claim_balance": "Claim fee pool balance",
-                "claim_collateral_fees": "Claim fees",
                 "claim_fees": "Claim fees",
                 "claim_pool_text": "The asset owner may withdraw funds from the fee pool using this form:",
                 "claim_text": "The asset owner may claim any accumulated fees here.",
@@ -993,9 +984,9 @@
                 "tooltip_resolution_date": "The resolution date is an informal statement when the asset owner intends to resolve this betting market."
             },
             "price_feed": {
-                "external_feed_price": "Settlement price (derived from price feeds and other parameters)",
+                "external_feed_price": "Feed price (derived from price feeds and other parameters)",
                 "feed_lifetime": "Feed lifetime (hours)",
-                "feed_price": "Feed price",
+                "feed_price": "Exchange rate",
                 "global_settlement_price": "Global settlement price will be",
                 "global_settlement_trigger": "Global settlement happens at price",
                 "initial_collateral_ratio": "Initial collateral ratio (ICR)",
@@ -1014,7 +1005,7 @@
             "price_feed_data": {
                 "core_exchange_rate": "CER",
                 "empty": "No valid feed producers",
-                "feed_price": "Feed price",
+                "feed_price": "Exchange rate",
                 "initial_collateral_ratio": "ICR",
                 "maintenance_collateral_ratio": "MCR",
                 "maximum_short_squeeze_ratio": "MSSR",
@@ -1180,7 +1171,7 @@
             "daily_pay": "Daily pay (BTS)",
             "date_text": "The start date should be at least a week into the future in order to allow people the time to discover, evaluate and vote for your worker.",
             "name_text": "The name of your worker should be short and descriptive, something like this: 'Worker Purpose - Account Name'",
-            "pay_text": "The daily pay defines how much you want to be paid per day and is defined in BTS. The current best practice is to define a salary in USD/CNY, and commit to burning whatever surplus you receive as a result of the BTS price increasing. As long as your worker is active and has sufficient votes to be above the refund worker, you will receive this daily salary.",
+            "pay_text": "The daily pay defines how much you want to be paid per day and is defined in KSH. The current best practice is to define a salary in USD/CNY, and commit to burning whatever surplus you receive as a result of the KSH price increasing. As long as your worker is active and has sufficient votes to be above the refund worker, you will receive this daily salary.",
             "period": "Duration",
             "title": "Worker name",
             "url_text": "You should supply a website, github document or google doc that describes in more detail the purpose of the worker and how you intend to use the worker pay.",
@@ -1191,7 +1182,7 @@
     },
     "external_service_provider": {
         "bridge": {
-            "description": "Bridges are external service providers that allow you to swap assets in and out of the BitShares Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of BTS or another Gateways UIA on the BitShares Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Bridges are external service providers that allow you to swap assets in and out of the HomePesa Blockchain. For example, you can send your BTC on the Bitcoin Blockchain to a Bridge, who will swap it and give you an equivalent amount of KSH or another Gateways UIA on the HomePesa Blockchain (for a fee of course). Normally, a Bridge does not hold your funds, but trust is required that they send you back the proper amount of the target asset. As it is an external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "short": "Bridge",
             "what_is": "What is a Bridge?"
         },
@@ -1199,7 +1190,7 @@
         "disabled_asset_2": "For more information visit Settings -> Entry External Service Providers. For any issues or questions please contact the gateway operator directly.",
         "expect_more": "If you expect to see more deposit and withdraw options for your assets, please check the External Service Providers in Settings > General.",
         "gateway": {
-            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the BitShares Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the BitShares Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the BitShares Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
+            "description": "Gateways are external service providers that allow you to deposit, trade and withdraw assets into the HomePesa Blockchain that are not native to it. For example, you can send your BTC on the Bitcoin Blockchain to a Gateway, who will in turn give you an UIA (user issued asset) on the HomePesa Blockchain, with the promise that you can withdraw it again (for a fee of course). While you are holding such an UIA on the HomePesa Blockchain, the Gateway becomes the custodian of your funds. As it is external service providers you implicitly agree to their Terms and Conditions by using any of their services or assets.",
             "prefix": "Prefix",
             "short": "Gateway",
             "what_is": "What is a Gateway?"
@@ -1211,7 +1202,7 @@
             "landing": "Landing Page",
             "name": "Name",
             "not_now": "Not now",
-            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the BitShares UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
+            "table_description": "The table below lists all Gateways and Bridges that are currently integrated with the HomePesa UI, this does not reflect any kind of endorsement. It lists the Name (sorted alphabetically), the type (Bridge or Gateway, and if Gateway the asset prefix, e.g. RUDEX.BTC), a link to their landing page with further information and an affiliate link to the Gateways wallet (if exists, usually a branded version of this UI). Please do your own due dilligence.",
             "title": "Choose your preferred Service Providers",
             "type": "Type",
             "use_none": "Use none",
@@ -1219,18 +1210,21 @@
             "wallet": "Wallet"
         },
         "welcome": {
-            "explanation_dex": "BitShares offers a native decentralized exchange, the BitShares DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
+            "explanation_dex": "HomePesa offers a native decentralized exchange, the HomePesa DEX. It is running completely on the blockchain with no need for centralized services, even the order matching is transparently on-chain.",
             "explanation_later": "If you want to adjust this later on, you can also choose the external service providers in the Settings.",
-            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the BitShares Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the BitShares DEX by providing you their own IOU ('I owe you') of it.",
-            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the BitShares UI. To do so, click 'Choose Services'. If you want to keep using the BitShares UI just like before, lick 'Not now'.",
-            "first_line": "today, we want to give you some insight on the BitShares Blockchain and services around it.",
-            "hello": "Dear BitShares' User"
+            "explanation_service_providers": "You can trade anything against everything, as long as the asset (token) is available on the HomePesa Blockchain. For tokens that are not native to it there exist external service providers (so called Gateways and Bridges), that allow you to trade tokens like BTC on the HomePesa DEX by providing you their own IOU ('I owe you') of it.",
+            "explanation_what_to_do": "You may choose which of those service providers you want to see readily available in the HomePesa UI. To do so, click 'Choose Services'. If you want to keep using the HomePesa UI just like before, lick 'Not now'.",
+            "first_line": "today, we want to give you some insight on the HomePesa Blockchain and services around it.",
+            "hello": "Dear HomePesa' User"
         }
     },
     "fees": {
-        "title": "Fees"
+        "title": "Fee Schedule"
     },
     "footer": {
+        "listing": "Fundraise",
+        "audit": "Audit",
+        "support": "Support",
         "advanced_settings": "Advanced settings",
         "backup": "A Backup is Required",
         "block": "Block",
@@ -1268,9 +1262,8 @@
             "bitcny": "bitCNY can be deposited or withdrawn 1:1 to real Yuan using a gateway service such as Magic Wallet. For more info, see https://www.magicw.net/",
             "bridge": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by CryptoBridge.",
             "gdex": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by GDEX.",
-            "iob": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
+            "ioxbank": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by ioxbank.com.",
             "open": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by OpenLedger.",
-            "pirate": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by PirateDEX.",
             "rudex": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by Rudex.",
             "trade": "The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by Blocktrades.",
             "win": "",
@@ -1285,10 +1278,10 @@
             "support_block": "For DEPOSIT AND WITHDRAWAL issues using \"BitSpark TRANSFER SERVICE\", please contact BitSpark at:"
         },
         "bridge": "Bridge",
-        "bridge_text": "A bridge lets you exchange an asset into another one, for example BTC to BTS.",
+        "bridge_text": "A bridge lets you exchange an asset into another one, for example BTC to KSH.",
         "calc": "Calculating",
-        "choose_deposit": "Please select the coin you would like to deposit",
-        "choose_withdraw": "Please select the coin you would like to withdraw",
+        "choose_deposit": "Please select the currency you would like to deposit",
+        "choose_withdraw": "Please select the currency you would like to withdraw",
         "citadel": {
             "coming_soon": "Coming soon",
             "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
@@ -1320,17 +1313,17 @@
         "deposit_warning": "Sending any other currency to the %(asset)s address will result in the loss of your deposit",
         "deposit_warning_memo": "Deposit %(asset)s must contains memo, otherwise it won't be credited",
         "fee": "Gateway fee",
-        "fiat": "Fiat",
+        "fiat": "Virtual Money gateway",
         "fiat_text": "Note: Fiat gateways are closed till further notice. Sorry for the inconvenience! Please follow our latest news and updates here <a target='_blank' rel='noopener noreferrer' href='https://blog.openledger.info/'>blog.openledger.info</a>",
         "frozen": "The user account %(account)s was frozen",
-        "gateway": "Gateway",
+        "gateway": "Blockchain Gateway",
         "gateway_deposit": {
             "confirmations": {
                 "last_irreversible": "Your deposit will be deposited after transaction will become irreversible",
                 "n_blocks": "Your deposit will be deposited after %(blocks)s confirmations from the network"
             }
         },
-        "gateway_text": "Choose whether you want to make a deposit or withdrawal here",
+        "gateway_text": "Choose whether to deposit or withdrawal here",
         "generate": "Generate",
         "generate_new": "Get new address",
         "generate_new_memo": "Get new memo",
@@ -1338,7 +1331,7 @@
         "info": "Info",
         "intermediate": "Intermediate account",
         "inventory": "Inventory",
-        "iob": {
+        "ioxbank": {
             "coming_soon": "Coming soon",
             "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
             "min_amount_error": "Please enter number >= minimum",
@@ -1358,14 +1351,7 @@
         "min_deposit_warning_amount": "Minimum Deposit: %(minDeposit)s %(coin)s",
         "min_deposit_warning_asset": "IMPORTANT: Send only %(coin)s to this deposit address on the blockchain native to %(coin)s. Sending less than %(minDeposit)s %(coin)s or any other currency to this address may result in the loss of your deposit.",
         "over_limit": "Limit Reached",
-        "phase_out_warning": "We recommend using the new {deposit_modal_link} and {withdraw_modal_link} modals as this page will be phased out",
-        "piratecash": {
-            "coming_soon": "Coming soon",
-            "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Please enter number >= minimum",
-            "support_block": "For support, please contact PirateCash at:",
-            "under_construction": "Under Construction"
-        },
+        "phase_out_warning": "",
         "please_generate_address": "Please, get new address ",
         "purchase": "Purchase %(asset)s",
         "purchase_1": "Quickly and easily purchase %(outputAsset)s using %(inputAsset)s from an external wallet. This service is provided by <a href='https://blocktrades.us/' target='blank' rel='noopener noreferrer'>Blocktrades</a>",
@@ -1389,7 +1375,7 @@
         "support_gdex": "For support, please contact GDEX",
         "symbol": "Symbol",
         "time": "Time",
-        "title": "Deposit & Withdraw",
+        "title": "",
         "transaction_history_info": " %(amount)s %(assetName)s with trancation id: %(txid)s ",
         "unavailable": "The gateway service for this asset is currently down, please try again later",
         "unavailable_CITADEL": "The Citadel Bridge is down or not responding",
@@ -1422,7 +1408,7 @@
             "coming_soon": "Coming soon",
             "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
             "min_amount_error": "Please enter number >= minimum",
-            "support_block": "For support, please contact XBTS at:",
+            "support_block": "For support, please contact XKSH at:",
             "under_construction": "Under Construction"
         },
         "your_account": "Your account"
@@ -1445,9 +1431,12 @@
         "account_notify": "The active account is now %(account)s",
         "account_value": "Account value",
         "accounts_manage": "Manage Accounts",
+        "bots": "Bots",
+        "listing": "Listing",
         "advanced": "Advanced",
+        "listing": "Fundraise",
         "collateral_ratio": "Collateral ratio",
-        "create_account": "Create Account",
+        "create_account": "Create wallet",
         "create_asset": "Create Asset",
         "current": "Current Account",
         "dashboard": "Portfolio",
@@ -1461,12 +1450,12 @@
         "lock_short": "Log out",
         "locked_tip": "<br/>Click to login.<br/><br/>Closing the browser window will also log you out.",
         "logout": "Logout",
-        "p2p_lending": "Credit Offer",
+        "p2p_lending": "Credit",
         "payments": "Send",
         "payments_legacy": "or Legacy Send",
-        "poolmart": "Liquidity Pools",
+        "poolmart": "Pool",
         "settings": "Settings",
-        "showcases": "Spotlight",
+        "showcases": "Business",
         "title": "%(wallet_name)s UI",
         "unlock": "Local Wallet Login",
         "unlock_password": "Cloud Wallet Login",
@@ -1480,9 +1469,9 @@
         "claim_period_due": "Claimable until",
         "id": "HTLC id",
         "preimage": "Preimage",
-        "preimage_explanation": "The secret preimage was used to calculate the preimage hash and is required to redeem this HTLC",
+        "preimage_explanation": "The secret preimage was used to calculate the preimage hash and is required to redeem this Smart Remittance",
         "preimage_hash": "Preimage hash",
-        "preimage_hash_explanation": "The preimage hash is calculated from the secret preimage and is imperative to HTLCs. With the secret preimage the HTLC can be redeemed. The content you see is: '(<preimage size>, <hash algorithm type>): <preimage hash>'",
+        "preimage_hash_explanation": "The preimage hash is calculated from the secret preimage and is imperative to Smart Remittances. With the secret preimage the Smart Remittance can be redeemed. The content you see is: '(<preimage size>, <hash algorithm type>): <preimage hash>'",
         "redeemer": "Redeemer",
         "seconds_to_add": "Add seconds to claim period"
     },
@@ -1643,9 +1632,9 @@
             "quantity": "Quantity",
             "recipient_account": "Recipient Account",
             "recipient_name": "Recipient Name",
-            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a BitShares account name.",
+            "recipient_name_tooltip": "You can define an arbitrary plaintext name for yourself to indicate who is being paid. Must not be a HomePesa account name.",
             "submit": "Submit",
-            "title": "Request"
+            "title": "Request/Invoice"
         },
         "tooltip_payment_proof": "Your account history has been searched for a match of sender, recipient and asset. This is an educated guess, but there is no direct link between this transfer and the shown invoice written on-chain.",
         "total": "Total",
@@ -1705,7 +1694,7 @@
             "confirm": "CONFIRM",
             "create_committee": "Become a committee member",
             "from": "From",
-            "text": "After being voted in as active committee you can help set policies and parameters for the BitShares blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of BitShares and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
+            "text": "After being voted in as active committee you can help set policies and parameters for the HomePesa blockchain including: <ul><li>Transaction fees</li><li>Parameters of BitAssets (e.g. market fees)</li><li>Blockchain parameters (e.g. block size & interval)</li><li>Referral and vesting parameters (e.g. cash back percent for life-time-members and vesting period)</li><li>Other governance matters</li></ul> Submit a link to your website or forum post explaining why yo would be a exemplary member to attract enough votes to become active. Committee members should have basic technical understanding of HomePesa and bring knowledge and expertise in key aspects of governing an autonomous and self-sustaining blockchain. This is an unpaid position.",
             "url": "URL",
             "web_example": "Enter link to your committee proposal post"
         },
@@ -1731,7 +1720,7 @@
             "address_generation_error": "Unable to generate address",
             "amount": "Amount to Deposit",
             "asset": "Asset",
-            "bts_transfer_description": "It's easy to receive BTS from anywhere. As long as BTS is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
+            "bts_transfer_description": "It's easy to receive KSH from anywhere. As long as KSH is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
             "cancel": "Cancel",
             "close": "Close",
             "header": "Deposit to %(account_name)s",
@@ -1834,7 +1823,7 @@
             "enter_public_signing_key": "Enter your public signing key",
             "invalid_key": "Public Key is invalid",
             "public_signing_key": "Public Signing Key",
-            "text": "After being voted in as an active witness you are added in the rotation of block producers and expected to produce blocks signed by your signing key and you are rewarded in BTS per produced block. Common criteria that help make your case are <ul><li>implementation of fallbacks (e.g. running a hot swap backup server) and appropriate server specifications to ensure a low number of missed blocks (e.g. high connectivity)</li><li>participation in block production and rolling releases of the testnet</li><li>provision of a public node for the community</li><li>publication of price feeds for the BitAssets</li></ul> Submit a link to your website or forum post explaining why you would be a exemplary member to attract enough votes to become active.",
+            "text": "After being voted in as an active witness you are added in the rotation of block producers and expected to produce blocks signed by your signing key and you are rewarded in KSH per produced block. Common criteria that help make your case are <ul><li>implementation of fallbacks (e.g. running a hot swap backup server) and appropriate server specifications to ensure a low number of missed blocks (e.g. high connectivity)</li><li>participation in block production and rolling releases of the testnet</li><li>provision of a public node for the community</li><li>publication of price feeds for the BitAssets</li></ul> Submit a link to your website or forum post explaining why you would be a exemplary member to attract enough votes to become active.",
             "url": "URL",
             "web_example": "Enter link to your witness proposal post",
             "witness_account": "Witness Account"
@@ -1873,7 +1862,7 @@
         "deposit_amount": "Deposit Amount",
         "deposit_details": "Details",
         "deposit_none": "No deposits",
-        "header_fiat": "Fiat",
+        "header_fiat": "Virtual Money gateway",
         "header_transaction_history": "Transaction history",
         "loading": "Loading...",
         "refresh_transaction_history": "Refresh",
@@ -1911,10 +1900,10 @@
         "fill_order_buy": "{account} bought {amount} at {price} for order #%(order)s",
         "fill_order_sell": "{account} sold {amount} at {price} for order #%(order)s",
         "htlc_create": "{from} locked {amount} for {to} to redeem until {lock_period}",
-        "htlc_extend": "{update_issuer} added {seconds_to_add} seconds to redeem period of HTLC {htlc_id}",
-        "htlc_redeem": "{redeemer} request to redeem from HTLC {htlc_id}",
-        "htlc_redeemed": "{to} redeemed {amount} from HTLC {htlc_id} of {from}",
-        "htlc_refund": "{to} got refund of HTLC {htlc_id}",
+        "htlc_extend": "{update_issuer} added {seconds_to_add} seconds to redeem period of Smart Remittance {htlc_id}",
+        "htlc_redeem": "{redeemer} request to redeem from Smart Remittance {htlc_id}",
+        "htlc_redeemed": "{to} redeemed {amount} from Smart Remittance {htlc_id} of {from}",
+        "htlc_refund": "{to} got refund of Smart Remittance {htlc_id}",
         "lifetime_upgrade_account": "{account} was upgraded to lifetime member",
         "limit_order_buy": "{account} placed order %(order)s to buy {amount} at {price}",
         "limit_order_cancel": "{account} cancelled order #%(order)s",
@@ -1927,9 +1916,9 @@
         "no_recent": "No recent transactions",
         "override_transfer": "{issuer} transferred {amount} from {from} to {to}",
         "pending": "pending %(blocks)s blocks",
-        "proposal_create": "{account} created a proposal",
-        "proposal_delete": "{account} deleted a proposal",
-        "proposal_update": "{account} updated a proposal",
+        "proposal_create": "{account} created a business proposal",
+        "proposal_delete": "{account} deleted a business proposal",
+        "proposal_update": "{account} updated a business proposal",
         "publish_feed": "{account} published feed price of {price}",
         "reg_account": "{registrar} registered the account {new_account}",
         "samet_fund_borrow": "{account} lent {amount} from flash loan {id}",
@@ -2077,7 +2066,7 @@
             "add_prediction": "A prediction is reflected as a limit order on the market of the prediction market asset with its collateral. This lets you create a buy order (you agree with the prediction), or a sell order with previous borrowing of the prediction market asset (you disagree with the prediction). You can also oppose one of the existing predictions listed below, which correlates to matching one of the existing limit orders on the blockchain.",
             "create_prediction_market_asset": "A prediction market is a special kind of SmartCoin. This lets you create such a prediction market asset with inputs tailored for this purpose.",
             "hide_invalid_asset": "Per default the table below only shows prediction market assets that meet common standards required for a consistent user experience (prediction and resolution date are given, and reasonable market fee). Uncheck this to show all assets that exist on the blockchain, and make sure you know what you are doing.",
-            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the BitShares community.",
+            "hide_unknown_houses": "Per default the table below only shows prediction market assets of known asset owners that meet requirements to increase their trustworthiness. As a participant, you need trust in the asset owner such that the asset will be resolved according to the real world outcome. Uncheck this to show all asset owners that exist on the blockchain, and make sure you know what you are doing. If you are the owner of a prediction market asset and want to be included in the default list, please contact the HomePesa community.",
             "oppose_is_incorrect": "You are opposing someone that thinks the prediction is incorrect. That means, you think the prediction will prove true. On the blockchain that reflects as buying and hodling the prediction market asset.",
             "oppose_proves_true": "You are opposing someone that thinks the prediction proves true. That means, you think the prediction will be incorrect. On the blockchain that reflects as borrowing and selling the prediction market asset.",
             "what_is_a_prediction_market_asset": "A prediction market asset is a special kind of asset that allows you to agree or disagree with the prediction statement of the asset and put collateral behind your opinion. It can be created by any user, and if you are participating you need to trust the asset owner to properly reflects the real world outcome on the blockchain.",
@@ -2146,7 +2135,7 @@
     "proposal_delete": {
         "using_owner_authority": "Using owner authority"
     },
-    "propose": "Propose",
+    "propose": "Busines account",
     "qr_address_scanner": {
         "address_found": "Address found",
         "amount": "Amount",
@@ -2186,7 +2175,7 @@
         "walletDescription": "A .bin-file will be automatically created. Please download it and keep in a safe place. You’ll need to use this file to login to your account in the future.",
         "walletLoginByValue": ".bin-file + Password",
         "walletModelTitle": "By .bin-file",
-        "walletNote": "Please keep in mind, that BitShares doesn't store users passwords and couldn't recover users accounts after password loss.",
+        "walletNote": "Please keep in mind, that HomePesa doesn't store users passwords and couldn't recover users accounts after password loss.",
         "whyBinFile": "Why do I need a .bin-file?"
     },
     "scaled_orders": {
@@ -2231,7 +2220,7 @@
         "backup": "Backup",
         "backup_backup": "Restore from a backup .bin-file",
         "backup_backup_short": "Restore from a backup",
-        "backup_brainkey": "Restore using a local wallet brainkey",
+        "backup_brainkey": "2. Restore using a local wallet brainkey",
         "backup_favorites": "Restore favorites using a json file",
         "backup_favorites_error": "Could not parse JSON.",
         "backup_favorites_finish": "Import favorites",
@@ -2239,7 +2228,7 @@
         "backup_favoritesbtn": "Backup favorites",
         "backup_favoritestext": "Back up your favorites to restore them later after updates.",
         "backup_key": "Import a private key",
-        "backup_legacy": "Import a BTS 0.9.3c key export file (.json)",
+        "backup_legacy": "Import a KSH 0.9.3c key export file (.json)",
         "backup_text": "Create backups here.",
         "backupcreate_backup": "Create local wallet backup",
         "backupcreate_brainkey": "Create brainkey backup",
@@ -2280,7 +2269,7 @@
         "lightTheme": "Light",
         "local_wallet": "Local Wallet Login",
         "locale": "Switch language",
-        "lookup_text": "Click the button below to check for unclaimed balances from BTS 1.0",
+        "lookup_text": "Click the button below to check for unclaimed balances from KSH 1.0",
         "low_latency": "Low latency",
         "medium_latency": "Medium latency",
         "midnightTheme": "Midnight",
@@ -2362,25 +2351,25 @@
             "fee_due_now_tooltip": "The indicated transaction fee will be paid when creating this barter proposal to move funds to the escrow",
             "fee_when_proposal_executes": "Fee when proposal executes",
             "fee_when_proposal_executes_tooltip": "When the proposal of this barter executes, the mentioned account will have to pay the indicated transaction fee for the underlying transfer operations",
-            "new_barter": "Propose a new barter",
-            "new_barter_tooltip": "This panel allows you to create a new barter. It utilizes the atomicity of a transaction to securely swap assets between two accounts (via transfer operations). The transaction is wrapped in a proposal and needs approval from both parties (called Peer 1 and Peer 2 below) to execute, and optionally from an escrow",
+            "new_barter": "Propose a new barter trade",
+            "new_barter_tooltip": "This panel allows you to create a new barter. It utilizes the atomicity of a transaction to securely swap assets between two accounts (via transfer operations). The transaction is wrapped in a business proposal and needs approval from both parties (called Peer 1 and Peer 2 below) to execute, and optionally from an escrow",
             "not_complete": "Please fill out all fields to see a description of the action here",
             "peer_left": "Peer 1",
             "peer_right": "Peer 2",
             "proposal_fee": "Proposal fee",
             "proposal_fee_tooltip": "The indicated transaction fee will be paid to create the proposal to realize this barter",
-            "propose_tooltip": "This creates a proposal that needs to be approved by you and all other involved parties. After broadcasting the proposal, go to find the Proposal tab in your Portfolio, approve the proposal and notify the other involved parties.",
+            "propose_tooltip": "This creates a business proposal that needs to be approved by you and all other involved parties. After broadcasting the proposal, go to find the Proposal tab in your Portfolio, approve the proposal and notify the other involved parties.",
             "remove_escrow": "Remove escrow",
             "send_to_escrow": "Use escrow as custodian for Peer 1's funds",
             "send_to_escrow_tooltip": "Enabling this will send the selected funds to the escrow, and then a barter proposal is created between escrow and Peer 2",
-            "title": "Barter",
+            "title": "Barter Trade",
             "total_fees": "Total fees: %(fee)s %(asset)s",
             "total_fees_tooltip": "The account that is indicated as Peer 1 will have to pay the indicated transaction fee in total for the whole barter"
         },
         "borrow": {
             "borrow_tooltip": "You can also find this feature in your Portfolio under the tab Margin Positions, or by clicking  Borrow in the Exchange",
             "choose": "Choose the SmartCoin you want to create a position for",
-            "description": "Borrow a BitAsset from the BitShares Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
+            "description": "Borrow a BitAsset from the HomePesa Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
             "do_it": "Let's do it",
             "get_started": "Get started",
             "navigate_with_keys": "The mechanism of the SmartCoin generation will be explained in the following steps. You can also use arrow keys to navigate",
@@ -2389,13 +2378,13 @@
             "previous": "Previous",
             "steps_benefits": {
                 "text": "Creating a Collateralized Debt Position allows you to provide liquidity for your desired SmartCoin (MPA), without giving up ownership of your collateral provided that you lock up enough collateral to guarantee the value of the SmartCoin. On the one hand, selling the newly generated SmartCoin on the open market will create leverage on your position (i.e. you sell it short, and will need to buy it back to close the position). On the other hand, holders of the SmartCoin benefit from the significantly less volatile SmartCoin, and they can additionally request a force settlement to obtain the corresponding value in its collateral without the need of markets.",
-                "text_legend": "Forced settlement: Holders of a SmartCoin can request a forced settlement. The SmartCoin is used to forcefully pay back the debt of the least collateralized positions while the former SmartCoin holder receives collateral as if he sold it for the forced settlement price. Any leftover collateral is returned to the position holder. This mechanism enforces a mandated delay after being triggered to avoid abuse (24 hours). \nForced Settlement Price: The price at which a forced settlement price will occur. It is calculated from the feed price by adding a forced settlement offset to disincentivize forced settlements. All settlements are converted to underlying backing asset (e.g. BTS in the case of bitUSD).",
+                "text_legend": "Forced settlement: Holders of a SmartCoin can request a forced settlement. The SmartCoin is used to forcefully pay back the debt of the least collateralized positions while the former SmartCoin holder receives collateral as if he sold it for the forced settlement price. Any leftover collateral is returned to the position holder. This mechanism enforces a mandated delay after being triggered to avoid abuse (24 hours). \nForced Settlement Price: The price at which a forced settlement price will occur. It is calculated from the feed price by adding a forced settlement offset to disincentivize forced settlements. All settlements are converted to underlying backing asset (e.g. KSH in the case of bitUSD).",
                 "title": "Benefits",
                 "title_within": "What are the benefits?"
             },
             "steps_concept": {
-                "text": "A Collateralized Debt Position enables every user of the BitShares Blockchain to generate SmartCoins (MPA) by providing collateral. The collateral is locked up until you pay back the SmartCoins you have generated. You are effectively borrowing the SmartCoin from the BitShares Blockchain.",
-                "text_legend": "Example bitUSD: Provide BTS as collateral to borrow bitUSD",
+                "text": "A Collateralized Debt Position enables every user of the HomePesa Blockchain to generate SmartCoins (MPA) by providing collateral. The collateral is locked up until you pay back the SmartCoins you have generated. You are effectively borrowing the SmartCoin from the HomePesa Blockchain.",
+                "text_legend": "Example bitUSD: Provide KSH as collateral to borrow bitUSD",
                 "title": "Concept",
                 "title_within": "What is a Collateralized Debt Position?"
             },
@@ -2405,7 +2394,7 @@
                 "title_within": ""
             },
             "steps_introduction": {
-                "text": "Use this native dApp from the BitShares Blockchain to manage depositing collateral and the generation of SmartCoins.",
+                "text": "Use this native dApp from the HomePesa Blockchain to manage depositing collateral and the generation of SmartCoins.",
                 "title_within": "This is the place to generate SmartCoins (Market Pegged Assets, MPAs)"
             },
             "steps_risks": {
@@ -2442,7 +2431,7 @@
             "payer_balance_not_sufficient": "There are not enough funds in the payer's account to claim the full limit amount of {limit}. The limit has been adjusted to reflect the currently available balance!",
             "period": "Specify period",
             "start_date": "First period starts on",
-            "title": "Direct debit",
+            "title": "Recurring bills",
             "tooltip": {
                 "authorized_account": "The account that is eligible to collect from your account.",
                 "limit_per_period": "The payee may collect a maximum amount of the specified asset (up to) per period. The payee can only collect once per period, even if not collected in full.",
@@ -2456,9 +2445,9 @@
         "htlc": {
             "actions": "Actions",
             "amount": "Amount",
-            "create_htlc": "Create HTLC",
+            "create_htlc": "Create Smart Remittance",
             "custom": "Custom",
-            "description": "A HTLC locks away funds for given recipient, who can redeem those funds by providing a secret preimage (password) that was used by the sender to create the contract. Disclosing the password happens off-chain.",
+            "description": "A Smart Remittance locks away funds for given recipient, who can redeem those funds by providing a secret preimage (password) that was used by the sender to create the contract. Disclosing the password happens off-chain.",
             "enter_secret_preimage": "Enter secret preimage",
             "expiration": "Expiration",
             "expiration_date": "Expiration date",
@@ -2469,7 +2458,7 @@
             },
             "expires": "Expires",
             "extend": "Extend",
-            "extend_htlc": "Extend HTLC",
+            "extend_htlc": "Extend Smart Remittance",
             "first_stage": "1st stage",
             "from": "From",
             "hash": "Hash",
@@ -2477,11 +2466,11 @@
             "preimage_has_been_created": "A random preimage has been created and filled in automatically below.",
             "recipient": "Recipient",
             "redeem": "Redeem",
-            "redeem_htlc": "Redeem HTLC",
+            "redeem_htlc": "Redeem Smart Remittance",
             "second_stage": "2nd stage",
             "sender": "Sender",
             "size": "Size",
-            "title": "Hashed Time-Lock Contracts",
+            "title": "B2B Transfer",
             "title_short": "HTLC",
             "to": "To",
             "tooltip": {
@@ -2503,8 +2492,8 @@
             "title": "Merchant Protocol"
         },
         "paper_wallet": {
-            "description": "Create a PDF with your account's keys printed (plain text and barcode). If the wallet is unlocked, the private keys are added as well.",
-            "title": "Paper Wallet"
+            "description": "To register AGENT account on HomePesa simply upgrade your M-PESA or VOOMA agent account NUMBER, For example:- `a-123456-mpesa` or `a-123456-vooma`, (must contain a- prefix) then upgrade to lifetime member.",
+            "title": "Agent"
         },
         "prediction_market": {
             "description": "Create a prediction into the future that others can agree or disagree with, leveraged with collateral.",
@@ -2515,8 +2504,8 @@
             "title": "Timed transfer"
         },
         "voting": {
-            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the BitShares Blockchain.",
-            "title": "Voting"
+            "description": "Create, view and pay remittance requests or invoices",
+            "title": "Merchant"
         }
     },
     "sync_fail": {
@@ -2539,7 +2528,6 @@
         "copy_tip": "Click here to copy the text to your clipboard",
         "cr_danger": "This position is currently being margin called. Consider adding collateral to bring the collateral ratio above %(mr)s or closing the position.",
         "cr_warning": "This position has a low level of collateral, and will get margin called if the collateral ratio drops below %(mr)s. Consider adding collateral or closing the position.",
-        "create_lock_periods": "Lock Periods",
         "debug_report": "Report an error or unexpected behavior you have found. Click to see the browser console log, create a screenshot and instructions how to best report your issue.",
         "deposit_tip": "To complete the deposit, go to your external %(asset)s wallet and make a transfer to the address listed on this page. You will receive the deposit as soon as it has been confirmed. If a memo is shown , it is essential that you include this memo in your transfer.",
         "disconnected": "You are not connected to an API node, try reloading or setting a new access point in the Settings",
@@ -2547,7 +2535,7 @@
         "filter_ops": "Use this list to filter your history by operation type.",
         "follow_user": "You are following this user",
         "follow_user_add": "Click to Follow this user",
-        "gateway": "Gateways provide IOUs on the BitShares Blockchain that are backed by the real asset",
+        "gateway": "Gateways provide IOUs on the HomePesa Blockchain that are backed by the real asset",
         "generate": "The generated password was created by your browser, locally. No one but you has access to it. Paste it below and save a copy in a safe place",
         "global_settle": "This asset is globally settled. Settling it will let you convert your holdings of %(asset)s to %(backingAsset)s instantly, at the global settlement price (visible in exchange header or asset details page).",
         "global_settle_price": "This is the price at which settle orders will execute. This asset is globally settled, thus settlement orders will execute instantly",
@@ -2686,7 +2674,7 @@
             "symbol3": "Symbols with 3 Characters",
             "symbol4": "Symbols with 4 Characters"
         },
-        "feed_price": "Feed price",
+        "feed_price": "Exchange rate",
         "feed_producer": "Became a feed producer for the asset",
         "file_write": "Wrote a file",
         "fill_or": "Fill or kill",
@@ -2845,14 +2833,14 @@
         "free": "Free",
         "from": "From",
         "header": "Transfer details",
-        "header_subheader": "Send funds from an account you control to another %(wallet_name)s account holder.",
-        "header_subheader_propose": "Propose to send funds from one %(wallet_name)s account to another. The BY account is the account proposing the transaction.",
+        "header_subheader": "Send funds from your account to another.",
+        "header_subheader_propose": "Propose to send funds from business account to another account",
         "memo": "Memo / Message",
         "memo_unlock": "Unlock your wallet/account in order to see this memo",
         "optional": "Optional",
         "phase_out_warning": "We recommend using the new {modal_link} modal as this page will be phased out",
         "see": "SEE MY TRANSFERS",
-        "send": "Send",
+        "send": "My account",
         "to": "To",
         "total": "Total: ",
         "warn_name_unable_read_memo": "Proposed sender will be unable to read this memo!"
@@ -2918,9 +2906,9 @@
     },
     "voting": {
         "create_ticket": "Lock 1 {asset}",
-        "description": "The BitShares blockchain allows the holders of its core token BTS to vote on block producers (witnesses), committee members (blockchain governance), worker proposals (reimbursement for tasks and strategic decisions through BSIPs/Polls).",
+        "description": "The HomePesa blockchain allows the holders of its core token KSH to vote on block producers (witnesses), committee members (blockchain governance), worker proposals (reimbursement for tasks and strategic decisions through BSIPs/Polls).",
         "increase_voting_power": "Create Lock",
-        "ticket_explanation": "Obtain voting power by locking away the core token BTS.",
+        "ticket_explanation": "Obtain voting power by locking away the core token KSH.",
         "title": "Voting"
     },
     "walkthrough": {
@@ -2952,9 +2940,125 @@
         "vertical_lock": "Disable auto scroll to scroll through the order book",
         "vertical_order": "View all orders for this market, including spread and latest order price"
     },
+    "bots": {
+        "asset_selector": {
+            "wait": "Please wait...",
+            "placeholder": "Your asset"
+        },
+        "common": {
+            "select_strategy": "Select strategy:",
+            "create": "Create",
+            "bot_state": "Bot state:",
+            "start": "Start",
+            "stop": "Stop",
+            "delete": "Delete",
+            "update": "Update",
+            "select_bot": "Please, select bot",
+            "name": "Name",
+            "base": "Base",
+            "quote": "Quote",
+            "asset": "Asset",
+            "balance": "Balance",
+            "amount": "Amount in order",
+            "balance_percent": "balance %",
+            "balance_value": "value",
+            "spread": "Spread, %"
+        },
+        "spread_trade": {
+            "balance_percent": "balance %",
+            "balance_value": "value",
+            "spread": "Spread, %",
+            "default_price": "Default Price",
+            "get_price_from_market": "Get price from market"
+        },
+        "trailing_stop": {
+            "sell_asset": "Sell asset",
+            "get_asset": "Get asset",
+            "amount": "Amount",
+            "min_amount": "Min amount",
+            "stoploss": "Stoploss",
+            "trailing_percent": "Trailing Percent, %"
+        },
+        "percent_up": {
+            "distance": "Distance, %",
+            "sell_asset": "Sell asset",
+            "get_asset": "Get asset"
+        }
+    },
+    "listing": {
+        "submit_request": "Submit request",
+        "add_coin": "Add Coin",
+        "donate": "Donate",
+        "donate_progress": "Crowdfunding progress",
+        "listed": "Listed",
+        "get_donate_tokens": "Get ",
+        "token": " token",
+        "goto": "Visit",
+        "loading": "Please wait, loading...",
+        "notice_informed": "By submitting request, I confirm that I've read the rules and conditions and agree with them",
+        "modal": {
+            "header": "Participate in crowdfunding",
+            "header2": "Support listing "
+        },
+        "table": {
+            "rank": "#",
+            "asset_name": "Asset name (symbol)",
+            "goal": "Goal",
+            "donates": "Received",
+            "status": "Status",
+            "progress": "Progress",
+            "coming_soon": "Coming soon",
+            "collecting": "Collecting",
+            "waiting": "Waiting",
+            "done": "Collected"
+        },
+        "texts": {
+            "header": "List an asset on RuDEX",
+            "text1": "Would you like to list an asset on RuDEX, and integrate with Graphene decentralized trading platform? Use our listing service via public crowdfunding. The listing process is very simple and is described below.",
+            "text2": "To sumbit an asset listing request on RuDEX platform please fill out a simple form (Submit request button). Our team will review your request in accordance with submitted information, and if the project fulfils our listing criteria, it will be added to the public list for public crowdfunding. The main goal for the voluntary crowdfunding is to gather the funds for the launch and maintenance of the gateway, as well as estimation of potentioal interest in an ansset.",
+            "text3": {
+                "t1": "Any RuDEX user can support the listing of their favorite assets via crowdfunding. ",
+                "t2": "To that end please ",
+                "get": "acquire "
+            },
+            "text4": {
+                "t1": "special tokens",
+                "t2": "Crowdfunding consists of sending tokens",
+                "t3": "via special \"Crowdfunding progress\" form ( ",
+                "t4": " button next to the asset name)."
+            },
+            "text5": {
+                "t1": "After the project reaches the set crowdfunding threshold all collected tokens are burned",
+                "t2": "and our teams initiates the listing procedure, that includes gateway creation and set up of the trading pairs for the asset.",
+                "t3": "Please note that the RuDEX team reserves the right to delist assets to protect our own interests and the interests of our customers."
+            },
+            "terms": {
+                "t1": "If your token is included in the voting section for subsequent listing, then the target amount of DONATE tokens for its implementation will be formed according to the following rule:",
+                "t2": "The amount is determined by the position in the rating on CoinMarketCap – the higher the rating, the lower the required amount; you can see the target for each range in parentheses.",
+                "tu1": "1-100 (3000 DONATE)",
+                "tu2": "101-300 (4000 DONATE)",
+                "tu3": "301-500 (5000 DONATE)",
+                "tu4": "500-1000 (7000 DONATE)",
+                "tu5": "1001 и ниже (10000 DONATE)",
+                "t3": "For BEP20 / ERC20 / TRC20 tokens the amount is also determined by the list above, however, for those below the top 300, the target amount will be 5000 DONATE."
+            },
+            "rules": {
+                "header": "Checklist for asset listing on HomePesa:",
+                "rule_1": "Please check ",
+                "rule_10": "rules",
+                "rule_11": " and submit a listing request.",
+                "rule_2": "Wait for the review results: if everything is in order, then it would be added to the project listing page.",
+                "rule_3": "Use your time to promote your project crowdfunding process via social networks, attract other users. Use",
+                "rule_4": " tokens to reach the crowdfunding goal (a RuDEX account is required for this).",
+                "rule_5": "Listing process is initiated after the crowdfunding goal is reach, and begins with the gateway launch preparation. Please provide the contacts for technical/marketing team, or any other qualified contact."
+            },
+            "end": "Good luck with your business and welcome to "
+        }
+    },
+
     "wallet": {
         "accept": "Accept",
-        "account_public": "Account Name (Public)",
+        "account_public": "Enter User Name",
         "active_wallet": "Active Local Wallet",
         "all_set": "You're all set!",
         "ask_to_select_wallet": "Please select a key file",
@@ -2962,7 +3066,7 @@
         "backup_brainkey": "Backup Brainkey",
         "backup_explain": "Clicking on the button below will generate a .bin-file. This file is encrypted with your wallet password, and contains all the private keys for your accounts. It can be used to restore your wallet, or move it to a different computer/browser.",
         "backup_login": "Backup & login",
-        "backup_new_account": "Congratulations, you've just created a new account on the %(wallet_name)s exchange powered by the BitShares blockchain! It is strongly recommended that you make a backup of your wallet now. Without a backup there is no way to restore your account if something happens to your computer.",
+        "backup_new_account": "Congratulations, you've just created a new account on the %(wallet_name)s exchange powered by the HomePesa blockchain! It is strongly recommended that you make a backup of your wallet now. Without a backup there is no way to restore your account if something happens to your computer.",
         "backup_types": "backup types",
         "backup_warning": "It appears that your private key files are not backed up. For security reasons we recommend users do not log in without backing up their private keys.",
         "balance_claim_lookup": "Lookup balances",
@@ -2978,7 +3082,7 @@
         "brainkey_w1": "To complete your backup, print this out, or write it down.",
         "brainkey_w2": "Anyone with access to your recovery key will",
         "brainkey_w3": "have access to funds within this local wallet.",
-        "bts_09_export": "BTS 0.9.3c key export file (.json)",
+        "bts_09_export": "KSH 0.9.3c key export file (.json)",
         "cancel": "Cancel",
         "change": "Change to %(name)s",
         "change_backup": "Now that you've changed your password, we highly recommend making a new backup.",
@@ -2994,16 +3098,16 @@
         "congrat": "Congratulations, you're ready!",
         "console": "Local Wallet Management Console",
         "create": "Create",
-        "create_a": "Create a new blockchain account",
+        "create_a": "Register Local Wallet. It is the most secure. To Login, Password and a Key bin-file are used. The file is saved only in your browser. To access your account from another device, e.g. your smart phone, you’ll need a backup file. Make sure you downloan and save this file to restore your account when you lose your device.",
         "create_account_password_text": "The keys for this new account will be derived using your password. <strong>Nothing is stored in the browser or in a central server, so you will need to ensure you remember this password!!</strong> Store it using a password manager or by writing it down manually.",
-        "create_account_text": "The account name you choose needs to be unique, as it will be registered publicly on the blockchain and will be your identifer for any transactions you make.",
+        "create_account_text": "",
         "create_backup": "Create Backup",
         "create_backup_of": "Create backup now",
         "create_importkeys_text": "In order to import keys, you first need to create a local wallet to contain the keys. Complete the dialog below to create a new local wallet.",
         "create_password": "Create a new account using a password",
         "create_success": "Your local wallet has been created",
         "create_text": "The %(wallet_name)s local wallet is stored in your browser, it is not stored in the cloud. A wallet can contain multiple accounts and can be easily transferred between browsers and computers using a backup file.",
-        "create_w_a": "Create a local wallet containing an account",
+        "create_w_a": "",
         "create_wallet": "Create new local wallet",
         "create_wallet_backup": "Create new wallet from backup",
         "current_pass": "Current password",
@@ -3020,17 +3124,17 @@
         "download": "Download",
         "enter_password": "Password",
         "existing_password": "Existing Password",
-        "first_account_paid": "Since this is your first account, a faucet will pay the registration fee for you.",
+        "first_account_paid": "",
         "generated": "Generated password",
         "go_get_started": "Getting Started",
-        "has_wallet": "When you create your first %(wallet_name)s account, a %(wallet_name)s local wallet will be automatically created as well and stored in your browser. This local wallet is encrypted with your password, and will contain any private keys belonging to your accounts. It is important that you take the time to backup this wallet once created!",
-        "import_20_notice1": "Import your BTS 2.0+ BACKUP first",
+        "has_wallet": "",
+        "import_20_notice1": "Import your KSH 2.0+ BACKUP first",
         "import_20_notice2": "(if you have one)",
         "import_backup": "Import %(wallet_name)s 2.0 backup (.bin-file)",
         "import_backup_choose": "Please select your backup file in the dialog below. This is completely safe as the file is not uploaded anywhere and never leaves your browser.",
         "import_balance": "Import balance(s)",
-        "import_bts": "Import a BTS 0.9.3c key export",
-        "import_bts1": "Import from BitShares 0.9.3c",
+        "import_bts": "Import a KSH 0.9.3c key export",
+        "import_bts1": "Import from HomePesa 0.9.3c",
         "import_key_success": "Successfully imported %(count)s keys.",
         "import_keys": "Import Keys",
         "import_keys_tool": "Key Import Tool",
@@ -3079,7 +3183,7 @@
         "remember_me": "Remember me",
         "remember_me_explanation": "Turn 'Remember Me' off to disable remembering your account name and other personal settings.",
         "reset": "Reset",
-        "restore": "Restore Local Wallet from Backup",
+        "restore": "1. Restore Local Wallet from Backup",
         "restore_backup": "Restore Backup",
         "restore_it_here": "Restore it here",
         "restore_key_file": "Restore key file..",
@@ -3117,7 +3221,7 @@
         "verified": "Verified",
         "verify": "I've written it down",
         "verify_prior_backup": "Verify Prior Backup",
-        "wallet_browser": "Your Web Browser is your Wallet",
+        "wallet_browser": "",
         "wallet_created": "Local Wallet Created",
         "wallet_crucial": "Your local wallet is <strong>only stored</strong> in your browser, so it is crucial that you create a backup that will enable you to recover your wallet if the data in your browser is lost! <strong>No one else can restore your account if you lose your backup.</strong>",
         "wallet_exist": "A local wallet called that already exists, please choose a new name",

@@ -1,13 +1,15 @@
-# Help
+# Homepesa Help
 
-This is the reference wallet of BitShares Blockchain which connects to BitShares Blockchain nodes (bitshares-core).
+HomePesa 2.0 is a Financial Smart Contracts platform that is based on the
+[Homepesa](https://github.com/cryptonomex/graphene) technology built by
+[Homepesa Sacco](http://cryptonomex.com). You can see Graphene as a toolkit or
+technology for real-time blockchains.
 
 This help section gives a brief overview and describes the most basic concepts
 of this application.
 
 ## Introduction 
- * [Disclaimer](disclaimer.md)
- * [BitShares](introduction/bitshares.md)
+ * [HomePesa](introduction/HomePesa.md)
  * [Wallet](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)
@@ -31,7 +33,8 @@ of this application.
  * [Short Selling BitAssets](dex/shorting.md)
 
 ## Development
- * [Bitshares UI Github](https://github.com/bitshares/bitshares-ui)
+ * [HomePesa UI Github](https://github.com/HomePesa/HomePesa-ui)
+ * [HackTheDEX](introduction/hackthedex.md)
 
 ----------
 [Glossary](glossary.md)
