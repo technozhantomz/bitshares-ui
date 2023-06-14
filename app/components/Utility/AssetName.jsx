@@ -184,8 +184,8 @@ class AssetName extends React.Component {
                 return assetDiv;
             } else {
                 let desc = null;
-                if (replacedName == "KSH") {
-                    desc = {main: counterpart.translate("assets.KSH")};
+                if (replacedName == "ACB") {
+                    desc = {main: counterpart.translate("assets.ACB")};
                 } else {
                     desc = asset_utils.parseDescription(
                         asset.getIn(["options", "description"])

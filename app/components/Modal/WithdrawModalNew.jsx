@@ -324,7 +324,7 @@ class WithdrawModalNew extends React.Component {
         let isBTS = false;
         if (coreAsset) {
             if (selectedAsset == coreAsset.get("symbol")) isBTS = true;
-        } else if (selectedAsset == "KSH") {
+        } else if (selectedAsset == "ACB") {
             isBTS = true;
         }
 
@@ -455,7 +455,7 @@ class WithdrawModalNew extends React.Component {
 
         let stateObj = {};
 
-        if (value == "KSH") {
+        if (value == "ACB") {
             stateObj = {isBTS: true};
         }
 

@@ -88,7 +88,7 @@ module.exports = function(env) {
             __UI_API__: JSON.stringify(env.apiUrl),
             __TESTNET__: !!env.testnet,
             __DEPRECATED__: !!env.deprecated,
-            DEFAULT_SYMBOL: "KSH",
+            DEFAULT_SYMBOL: "ACB",
             __GIT_BRANCH__: JSON.stringify(git.branch()),
             __PERFORMANCE_DEVTOOL__: !!env.perf_dev
         }),

@@ -413,7 +413,7 @@ class AccountPortfolioList extends React.Component {
     }
 
     _renderBuy = (symbol, canBuy, assetName, emptyCell, balance) => {
-        if (symbol === "KSH" && balance <= 1000000) {
+        if (symbol === "ACB" && balance <= 1000000) {
             // Precision of 5, 1 = 10^5
             return (
                 <span>
@@ -1003,7 +1003,7 @@ class AccountPortfolioList extends React.Component {
             );
             const canDeposit =
                 (backedCoin && backedCoin.depositAllowed) ||
-                asset.get("symbol") == "KSH";
+                asset.get("symbol") == "ACB";
 
             const canWithdraw =
                 backedCoin &&
@@ -1246,7 +1246,7 @@ class AccountPortfolioList extends React.Component {
                                 .find(
                                     a => a.backingCoin === thisAssetName[1]
                                 ) ||
-                            asset.get("symbol") == "KSH";
+                            asset.get("symbol") == "ACB";
 
                         const canBuy = !!this.props.bridgeCoins.get(
                             asset.get("symbol")
@@ -1466,9 +1466,9 @@ class AccountPortfolioList extends React.Component {
                 atLeastOneHas.buy = true;
             }
             if (!!_item.deposit && _item.deposit !== "-") {
-                if (_item.key == "KSH" && GatewayStore.anyAllowed()) {
+                if (_item.key == "ACB" && GatewayStore.anyAllowed()) {
                     atLeastOneHas.depositOnlyBTS =
-                        _item.key == "KSH" && !atLeastOneHas.deposit;
+                        _item.key == "ACB" && !atLeastOneHas.deposit;
                     atLeastOneHas.deposit = true;
                 }
             }

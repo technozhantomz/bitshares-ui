@@ -5,10 +5,10 @@ require("file-loader?name=asset-symbols/[name].png!./unknown.png");
 require("file-loader?name=asset-symbols/[name].png!./rudex.png");
 
 // Core asset
-require("file-loader?name=asset-symbols/[name].png!./ksh.png");
+require("file-loader?name=asset-symbols/[name].png!./acb.png");
 
 // gpAssets
-require("file-loader?name=asset-symbols/[name].png!./usd.png");
+require("file-loader?name=asset-symbols/[name].png!./ksh.png");
 require("file-loader?name=asset-symbols/[name].png!./eur.png");
 require("file-loader?name=asset-symbols/[name].png!./rub.png");
 require("file-loader?name=asset-symbols/[name].png!./cny.png");

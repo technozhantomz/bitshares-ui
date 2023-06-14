@@ -13,7 +13,7 @@ function _isTestnet() {
     const testnet =
         "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"; // just for the record
     const mainnet =
-        "6ee525be468985b8f6430b0963cee9de9afa06874461efa27853aa69442034e9";
+        "841ad20f7171921d1ae04c3cb7c906980090859f36bca8137a0979ea94fd0ca2";
 
     // treat every other chain as testnet
     return Apis.instance().chain_id !== mainnet;
@@ -93,14 +93,14 @@ export function getUnits() {
     if (_isTestnet()) {
         return ["TEST"];
     }
-    return ["KSH", "USD", "CNY", "EUR", "GOLD", "SILVER"];
+    return ["ACB", "KSH",  "CNY", "EUR", "GOLD", "SILVER"];
 }
 
 export function getDefaultMarket() {
     if (_isTestnet()) {
         return "USD_TEST";
     }
-    return "KSH_USD";
+    return "ACB_USD";
 }
 
 /**
@@ -112,7 +112,7 @@ export function getMyMarketsBases() {
     if (_isTestnet()) {
         return ["TEST"];
     }
-    return ["KSH", "USD", "CNY", "EUR", "GOLD", "SILVER"];
+    return ["ACB", "KSH", "CNY", "EUR", "GOLD", "SILVER"];
 }
 
 /**
@@ -128,7 +128,7 @@ export function getMyMarketsQuotes() {
         nativeTokens: [
             "BTC",
             "BTC1.0",
-            "KSH",
+            "ACB",
             "CNY",
             "CNY1.0",
             "EUR",
@@ -170,9 +170,9 @@ export function getMyMarketsQuotes() {
             "PIRATE.COSA"
         ],
         xbtsxTokens: [
-            "KSH.USD",
-            "KSH.RUB",
-            "KSH.EUR",
+            "ACB.USD",
+            "ACB.RUB",
+            "ACB.EUR",
             "NFT.LAND"
             
         ],
@@ -198,8 +198,8 @@ export function getFeaturedMarkets(quotes = []) {
         return [["USD", "TEST"]];
     }
     return [
-        ["USD", "KSH"],
-        ["KSH", "USD"],
+        ["USD", "ACB"],
+        ["ACB", "USD"],
         ["USD", "GOLD"],
         ["GOLD", "USD"]
     ].filter(a => {
@@ -217,7 +217,7 @@ export function getAssetNamespaces() {
     if (_isTestnet()) {
         return [];
     }
-    return ["KSH."/*, "GDEX.", "HONEST.", "IOB.", "PIRATE."*/];
+    return ["ACB."/*, "GDEX.", "HONEST.", "IOB.", "PIRATE."*/];
 }
 
 /**
@@ -242,7 +242,7 @@ export function allowedGateway(gateway) {
         "GDEX",
         "PIRATE",
         */
-        "KSH"
+        "ACB"
         /*
         "IOB",
         "CITADEL", // keep to display the warning icon, permanently disabled in gateways.js
@@ -267,7 +267,7 @@ export function getAllowedLogins() {
 }
 
  export function getImageName(symbol) {
-    if (symbol.startsWith("KSH.")) return symbol;
+    if (symbol.startsWith("ACB.")) return symbol;
     if (
         get_allTokens().nativeTokens.indexOf(symbol) !== -1 ||
         symbol == "USD" ||

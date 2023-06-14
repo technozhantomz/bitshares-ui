@@ -67,11 +67,12 @@ class MenuDataStructure {
         const allItems = MenuDataStructure.getAllEntries();
 
         return [
-            allItems.dashboard,
+            allItems.account,
             allItems.market,
             allItems.lending,
-            allItems.explorer
-        ];
+            //allItems.listing,
+            allItems.deposit_withdraw
+            ];
     }
 
     static getDropdownMenu() {
@@ -99,12 +100,12 @@ class MenuDataStructure {
         allItems.insight = function(state) {
             let item = oldinsight(state);
             let submenu = [
-                allItems.account_voting,
+                //allItems.account_voting,
                 allItems.account_assets,
                 allItems.account_pools,
                 allItems.account_signedmessages,
                 allItems.account_stats,
-                allItems.account_vesting,
+                //allItems.account_vesting,
                 allItems.account_whitelist,
                 allItems.account_permissions
             ];
@@ -113,23 +114,30 @@ class MenuDataStructure {
         };
 
         return [
+             //allItems.create_account,
             allItems.login,
             allItems.create_account,
-            allItems.follow,
+            //allItems.follow,
             allItems.divider,
-            allItems.dashboard,
-            allItems.market,
+            allItems.divider,
+            //allItems.dashboard,
+            allItems.account,
+            allItems.spotlight,
             allItems.lending,
+            allItems.deposit_withdraw,
+            allItems.market,
             allItems.poolmart,
-            allItems.explorer,
+            //allItems.explorer,
             allItems.divider,
             allItems.transfer,
-            allItems.deposit,
-            allItems.withdraw,
-            allItems.account_voting,
-            allItems.spotlight,
+            //allItems.deposit,
+            //allItems.withdraw,
+            allItems.settings,
+            //allItems.account_voting,
             allItems.insight,
             allItems.divider,
+            allItems.listing,
+            //allItems.bots,
             // allItems.account_voting,
             // allItems.account_assets,
             // allItems.account_signedmessages,
@@ -139,7 +147,7 @@ class MenuDataStructure {
             // allItems.account_whitelist,
             // allItems.account_permissions,
             // allItems.divider,
-            allItems.settings,
+            //allItems.settings,
             allItems.settings_mobile,
             allItems.accounts,
             // allItems.news,
@@ -179,12 +187,13 @@ class MenuDataStructure {
                 hidden: !!state.passwordLogin,
                 inDropdownBehavior: MenuItemType.Always
             }),
-            dashboard: state => ({
-                includePattern: ["/account", "account/", "/account/"],
+             dashboard: state => ({
+                includePattern: [],
                 excludePattern: [
                     "/assets",
                     "/voting",
                     "/signedmessages",
+                    "/listing",
                     "/member-stats",
                     "/vesting",
                     "/whitelist",
@@ -196,6 +205,62 @@ class MenuDataStructure {
                 inHeaderBehavior: MenuItemType.WhenAccount,
                 inDropdownBehavior: MenuItemType.WhenAccount
             }),
+            account: state => ({
+                includePattern: ["/"],
+                excludePattern: [
+                    "/assets",
+                    "/voting",
+                    "/signedmessages",
+                    "/member-stats",
+                    "/vesting",
+                    "/whitelist",
+                    "/permissions"
+                ],
+                target: `/account/${state.currentAccount}`,
+                icon: "user",
+                text: "header.account",
+                inHeaderBehavior: MenuItemType.WhenAccount,
+                inDropdownBehavior: MenuItemType.Never
+            }),
+            bots: state => ({
+                includePattern: ["/bots"],
+                excludePattern: [
+                    "/help/bots",
+
+                    "/assets",
+                    "/whitelist",
+                    //"/voting",
+                    "/member-stats",
+                    "/signedmessages",
+                    //"/vesting",
+                    "/accounts",
+                    "/permissions"
+                ],
+                target: "/bots",
+                icon: "menu-robot",
+                text: "header.bots",
+                inHeaderBehavior: MenuItemType.WhenAccount,
+                inDropdownBehavior: MenuItemType.Never
+            }),
+           listing: state => ({
+            includePattern: ["/listing"],
+             excludePattern: [
+                    "/assets",
+                    "/whitelist",
+                    //"/voting",
+                    "/member-stats",
+                    "/signedmessages",
+                    //"/vesting",
+                    "/accounts",
+                    "/permissions"
+                ],
+                target: "/listing",
+                icon: "listing",
+                text: "header.listing",
+                inHeaderBehavior: MenuItemType.Dynamic,
+                inDropdownBehavior: MenuItemType.Always
+            }),
+
             follow: state => ({
                 target: state.clickHandlers.followUnfollow,
                 icon: {
@@ -224,7 +289,6 @@ class MenuDataStructure {
                 target: "/pools",
                 icon: {name: "poolmart", title: "icons.poolmart.title"},
                 text: "header.poolmart",
-                inHeaderBehavior: MenuItemType.Always,
                 inDropdownBehavior: MenuItemType.Always
             }),
             lending: state => ({
@@ -281,12 +345,13 @@ class MenuDataStructure {
             }),
             deposit_withdraw: state => ({
                 includePattern: "deposit-withdraw",
+                target: "/deposit-withdraw",
                 icon: {
                     name: "deposit-withdraw",
                     title: "icons.deposit.deposit_withdraw"
                 },
                 text: "header.deposit-withdraw",
-                inHeaderBehavior: MenuItemType.Dynamic,
+                inHeaderBehavior: MenuItemType.Always,
                 inDropdownBehavior: MenuItemType.Never
             }),
             settings: state => ({
@@ -303,7 +368,7 @@ class MenuDataStructure {
                 target: "/spotlight",
                 icon: "showcases",
                 text: "header.showcases",
-                inHeaderBehavior: MenuItemType.Dynamic,
+                inHeaderBehavior: MenuItemType.Always,
                 inDropdownBehavior: MenuItemType.Always
             }),
             settings_mobile: state => ({
