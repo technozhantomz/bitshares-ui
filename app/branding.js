@@ -11,9 +11,9 @@ import {Apis} from "bitsharesjs-ws";
  */
 function _isTestnet() {
     const testnet =
-        "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"; // just for the record
+        "5cf109eab4deac0cbc15d3c85d1c4a013915c2e8678fa1e1ed921b0de11e4b47"; // just for the record
     const mainnet =
-        "841ad20f7171921d1ae04c3cb7c906980090859f36bca8137a0979ea94fd0ca2";
+        "5cf109eab4deac0cbc15d3c85d1c4a013915c2e8678fa1e1ed921b0de11e4b47";
 
     // treat every other chain as testnet
     return Apis.instance().chain_id !== mainnet;
@@ -42,7 +42,7 @@ export function getWalletURL() {
  */
 export function getFaucet() {
     return {
-        url: "https://api.acloudbank.com", // 2017-12-infrastructure worker proposal
+        url: "https://registra.homepesa.org", // 2017-12-infrastructure worker proposal
         show: true,
         editable: false,
         referrer: "onboarding.acloudbank.foundation"

@@ -69,7 +69,7 @@ export const settingsAPIs = {
             location: "Cloud hosted"
         },
         {
-            url: "wss://wsss.homepesa.org/ws",
+            url: "wss://wss.acloudbank.com/ws",
             location: "Cloud hosted"
         }
     ],
