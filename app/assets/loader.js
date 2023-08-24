@@ -6,5 +6,3 @@ require("indexeddbshim");
 require("./asset-symbols/symbols.js");
 require("./images-loader.js");
 require("./language-dropdown/flags.js");
-require("./coins-logo/coins.js");
-require("./images/images.js");

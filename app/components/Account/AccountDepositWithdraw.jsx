@@ -410,7 +410,7 @@ class AccountDepositWithdraw extends React.Component {
         });
 
         serList.push({
-            name: "ACLOUDBANK",
+            name: "XBTS Native Chains",
             identifier: "XBTSX",
             template: (
                 <div className="content-block">

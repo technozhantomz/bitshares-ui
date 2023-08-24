@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import AltContainer from "alt-container";
 import Translate from "react-translate-component";
 import BindToChainState from "../Utility/BindToChainState";
@@ -22,7 +23,6 @@ import {ChainStore} from "bitsharesjs";
 import ifvisible from "ifvisible";
 import {getWalletName} from "branding";
 import {Tooltip} from "bitshares-ui-style-guide";
-import {Link} from "react-router-dom";
 
 class Footer extends React.Component {
     static propTypes = {
@@ -83,7 +83,7 @@ class Footer extends React.Component {
     componentDidMount() {
         this.checkNewVersionAvailable.call(this);
 
-        this.downloadLink = "https://github.com/ui/releases";
+        this.downloadLink = "https://releases.io/latest";
 
         let ensure = this._ensureConnectivity.bind(this);
         ifvisible.on("wakeup", function() {
@@ -112,7 +112,7 @@ class Footer extends React.Component {
     checkNewVersionAvailable() {
         if (__ELECTRON__) {
             fetch(
-                "https://api.github.com/repos/blckchnd/rudex-ui/releases/latest"
+                "https://api.github.com/repos/releases/latest"
             )
                 .then(res => {
                     return res.json();
@@ -493,7 +493,7 @@ class Footer extends React.Component {
                                     />
                                     {__GIT_BRANCH__ === "staging" ? (
                                         <a
-                                            href={`https://github.com/ui/commit/${version.trim()}`}
+                                            href={`https://commit/$.io{version.trim()}`}
                                             className="version external-link"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -506,7 +506,12 @@ class Footer extends React.Component {
                                         </span>
                                     )}
                                 </span>
-
+                                <span>
+                                    {" "}
+                                    -{" "}
+                                    <Link to="/help/disclaimer">Disclaimer</Link>
+                                    {" "}
+                                </span>
                                 {state.newVersion && (
                                     <Translate
                                         content="footer.update_available"
@@ -519,47 +524,6 @@ class Footer extends React.Component {
                                     />
                                 )}
                             </div>
-                            <Link
-                                style={{
-                                    flexFlow: "row",
-                                    padding: "0 0.5rem",
-                                    borderRight:
-                                        "1px solid rgba(128, 128, 128, 0.45)",
-                                    lineHeight: "2rem",
-                                    fontSize: "1em"
-                                }}
-                                to={"/listing"}
-                            >
-                                <Translate content="footer.listing" />
-                            </Link>
-                            <a
-                                style={{
-                                    padding: "0 0.5rem",
-                                    borderRight:
-                                        "1px solid rgba(128, 128, 128, 0.45)",
-                                    lineHeight: "2rem",
-                                    fontSize: "1em"
-                                }}
-                                href="https://audit.homepesa.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Translate content="footer.audit" />
-                            </a>
-                            <a
-                                style={{
-                                    padding: "0 0.5rem",
-                                    borderRight:
-                                        "1px solid rgba(128, 128, 128, 0.45)",
-                                    lineHeight: "2rem",
-                                    fontSize: "1em"
-                                }}
-                                href="https://commodity.freshdesk.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Translate content="footer.support" />
-                            </a>
                         </div>
                         {!!routerTransitioner &&
                             routerTransitioner.isBackgroundPingingInProgress() && (
@@ -584,59 +548,6 @@ class Footer extends React.Component {
                                     &nbsp; &nbsp;
                                 </div>
                             )}
-
-                        <div
-                            className=""
-                            style={{
-                                justifyContent: "flex-end"
-                            }}
-                        >
-                            <div
-                                style={{
-                                    display: "flex"
-                                }}
-                            >
-                                <a
-                                    style={{
-                                        padding: "0 0.5rem",
-                                        borderLeft:
-                                            "1px solid rgba(128, 128, 128, 0.45)",
-                                        lineHeight: "2rem",
-                                        fontSize: "1em"
-                                    }}
-                                    href="https://play.google.com/store/apps/details?id=org.homepesa.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        style={{
-                                            height: "22px"
-                                        }}
-                                        src={"/images/google-play.png"}
-                                    />
-                                </a>
-                                <a
-                                    style={{
-                                        padding: "0 0.5rem",
-                                        borderLeft:
-                                            "1px solid rgba(128, 128, 128, 0.45)",
-                                        lineHeight: "2rem",
-                                        fontSize: "1em"
-                                    }}
-                                    href="https://cbk.co.ke/exchanges/homepesa.sacco/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        style={{
-                                            height: "22px"
-                                        }}
-                                        src={"/images/coinmarketcap.png"}
-                                    />
-                                </a>
-                            </div>
-                        </div>
-
                         {synced ? null : (
                             <div className="grid-block shrink txtlabel cancel">
                                 <Translate content="footer.nosync" />

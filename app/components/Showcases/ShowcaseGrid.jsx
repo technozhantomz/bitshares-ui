@@ -32,34 +32,30 @@ class ShowcaseGrid extends Component {
         const tiles = [
             {
                 title: "showcases.paper_wallet.title",
-                target: event => {
-                    thiz.props.history.push("/create-account/password");
+                target: () => {
+                    if (hasAccount) {
+                        createPaperWalletAsPDF(this.state.currentAccount);
+                    }
                 },
                 description: "showcases.paper_wallet.description",
-                icon: "create_account", // see Icons app/compoentns/Icon/Icon
+                icon: "wallet", // see Icons app/compoentns/Icon/Icon
                 disabled: hasAccount
                     ? false
                     : "Please login to use this functionality"
             },
             {
-                title: "showcases.merchant_protocol.title",
+                title: "showcases.voting.title",
                 target: event => {
-                    thiz.props.history.push("/invoice/request");
+                    if (hasAccount) {
+                        thiz.props.history.push(
+                            "/account/" +
+                                this.state.currentAccount.get("name") +
+                                "/voting"
+                        );
+                    }
                 },
-                description: "showcases.merchant_protocol.description",
-                icon: "merchant",
-                disabled: hasAccount
-                    ? false
-                    : "Please login to use this functionality"
-            },
-            
-            {
-                title: "showcases.htlc.title",
-                target: event => {
-                    thiz.props.history.push("/htlc");
-                },
-                description: "showcases.htlc.description",
-                icon: "htlc",
+                description: "showcases.voting.description",
+                icon: "voting",
                 disabled: hasAccount
                     ? false
                     : "Please login to use this functionality"
@@ -76,12 +72,36 @@ class ShowcaseGrid extends Component {
                     : "Please login to use this functionality"
             },
             {
+                title: "showcases.borrow.title",
+                target: () => {
+                    if (hasAccount) {
+                        thiz.props.history.push("/borrow");
+                    }
+                },
+                description: "showcases.borrow.description",
+                icon: "borrow",
+                disabled: hasAccount
+                    ? false
+                    : "Please login to use this functionality"
+            },
+            {
                 title: "showcases.direct_debit.title",
                 target: event => {
                     thiz.props.history.push("/direct-debit");
                 },
                 description: "showcases.direct_debit.description",
                 icon: "direct_debit",
+                disabled: hasAccount
+                    ? false
+                    : "Please login to use this functionality"
+            },
+            {
+                title: "showcases.htlc.title",
+                target: event => {
+                    thiz.props.history.push("/htlc");
+                },
+                description: "showcases.htlc.description",
+                icon: "htlc",
                 disabled: hasAccount
                     ? false
                     : "Please login to use this functionality"
@@ -96,8 +116,38 @@ class ShowcaseGrid extends Component {
                 disabled: hasAccount
                     ? false
                     : "Please login to use this functionality"
+            },
+            {
+                title: "showcases.merchant_protocol.title",
+                target: event => {
+                    thiz.props.history.push("/invoice/request");
+                },
+                description: "showcases.merchant_protocol.description",
+                icon: "merchant",
+                disabled: hasAccount
+                    ? false
+                    : "Please login to use this functionality"
+            },
+            {
+                title: "showcases.timed_transfer.title",
+                target: () => {},
+                description: "showcases.timed_transfer.description",
+                icon: "alarm",
+                disabled: true,
+                comingSoon: true
+            },
+            {
+                title: "showcases.instant_trade.title",
+                target: event => {
+                    thiz.props.history.push("/instant-trade");
+                },
+                description: "showcases.instant_trade.description",
+                icon: "instant-trade",
+                disabled: hasAccount
+                    ? false
+                    : "Please login to use this functionality"
             }
-            
+            // .... even more tiles in this list
         ];
         return (
             <div

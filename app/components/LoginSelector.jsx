@@ -15,7 +15,6 @@ import CreateAccountPassword from "./Account/CreateAccountPassword";
 import {Route} from "react-router-dom";
 import {getWalletName, getLogo, getAllowedLogins} from "branding";
 import {Select, Row, Col, Icon} from "bitshares-ui-style-guide";
-
 var logo = getLogo();
 
 const FlagImage = ({flag, width = 50, height = 50}) => {
@@ -38,6 +37,7 @@ class LoginSelector extends React.Component {
             currentLocale: SettingsStore.getState().settings.get("locale")
         };
         this.unmounted = false;
+
         this.handleLanguageSelect = this.handleLanguageSelect.bind(this);
     }
 
@@ -58,7 +58,7 @@ class LoginSelector extends React.Component {
     //     this.props.history.push("/account/" + this.props.currentAccount);
     // }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         isIncognito(incognito => {
             if (!this.unmounted) {
                 this.setState({incognito});
@@ -97,19 +97,13 @@ class LoginSelector extends React.Component {
                 filterOption={this.languagesFilter}
                 value={this.state.currentLocale}
                 onChange={this.handleLanguageSelect}
-                style={{width: "150px", marginBottom: "16px"}}
+                style={{width: "123px", marginBottom: "16px"}}
             >
                 {this.state.locales.map(locale => (
                     <Select.Option
                         key={locale}
                         language={counterpart.translate("languages." + locale)}
                     >
-                        <div
-                            className="table-cell"
-                            style={{display: "inline", paddingRight: "10px"}}
-                        >
-                            <FlagImage width="24" height="24" flag={locale} />
-                        </div>
                         {counterpart.translate("languages." + locale)}
                     </Select.Option>
                 ))}
@@ -229,16 +223,16 @@ class LoginSelector extends React.Component {
                                 </h5>
                             </div>
                         )}
-                        {getAllowedLogins().includes("password") && (
+                        {getAllowedLogins().includes("wallet") && (
                             <Route
-                                path="/create-account/password"
+                                path="/create-account/wallet"
                                 exact
                                 component={CreateAccount}
                             />
                         )}
-                        {getAllowedLogins().includes("wallet") && (
+                        {getAllowedLogins().includes("password") && (
                             <Route
-                                path="/create-account/wallet"
+                                path="/create-account/password"
                                 exact
                                 component={CreateAccountPassword}
                             />
@@ -250,18 +244,15 @@ class LoginSelector extends React.Component {
     }
 }
 
-export default connect(
-    LoginSelector,
-    {
-        listenTo() {
-            return [AccountStore];
-        },
-        getProps() {
-            return {
-                currentAccount:
-                    AccountStore.getState().currentAccount ||
-                    AccountStore.getState().passwordAccount
-            };
-        }
+export default connect(LoginSelector, {
+    listenTo() {
+        return [AccountStore];
+    },
+    getProps() {
+        return {
+            currentAccount:
+                AccountStore.getState().currentAccount ||
+                AccountStore.getState().passwordAccount
+        };
     }
-);
+});
